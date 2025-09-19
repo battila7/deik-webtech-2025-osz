@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Source: http://shakespeare.mit.edu/hamlet/ -->
-<!DOCTYPE play SYSTEM "play2.dtd">
-<?xml-stylesheet type="text/css" href="play2.css"?>
+<!DOCTYPE play SYSTEM "play.dtd">
+<?xml-stylesheet type="text/css" href="play.css"?>
 <play>
     <author>William Shakespeare</author>
     <title>The Tragedy of Hamlet, Prince of Denmark</title>
