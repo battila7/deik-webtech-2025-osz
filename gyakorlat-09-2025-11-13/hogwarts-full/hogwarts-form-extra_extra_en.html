@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwarts Registration Form</title>
+    <link rel="stylesheet" href="hogwarts-form.css">
+    <style>
+        form.fancy-form :invalid {
+            background-color: tomato;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hogwarts Registration Form</h1>
+    <form id="hogwarts-form" class="fancy-form" method="post" enctype="multipart/form-data"
+        action="https://webhook.site/f5ec9330-045f-430f-9337-a5193735e26a">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="e.g., Harry James Potter">
+        </div>
+        <div>
+            <label for="dob">Date of birth</label>
+            <input type="date" name="dob" id="dob" required>
+        </div>
+        <div>
+            <label for="house">House</label>
+            <select name="house" id="house" required>
+                <option value="" data-color-primary="transparent">--Please choose an option--</option>
+                <option value="gryffindor" data-color-primary="red">Gryffindor</option>
+                <option value="hufflepuff" data-color-primary="yellow">Hufflepuff</option>
+                <option value="ravenclaw" data-color-primary="blue">Ravenclaw</option>
+                <option value="slytherin" data-color-primary="green">Slytherin</option>
+            </select>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" minlength="6"
+                pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9])|([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+                title="The password must contain 6 or more characters. Only English letters and digits are allowed. The password must contain both letters and digits."
+                required>
+        </div>
+        <div>
+            <label for="password2">Confirm password</label>
+            <input type="password" name="password2" id="password2" minlength="6"
+                pattern="[a-zA-Z0-9]*(([a-zA-Z][a-zA-Z0-9]*[0-9])|([0-9][a-zA-Z0-9]*[a-zA-Z]))[a-zA-Z0-9]*"
+                title="The password must contain 6 or more characters. Only English letters and digits are allowed. The password must contain both letters and digits."
+                required>
+        </div>
+        <div>
+            <label for="has-pet">I hereby state that I have a companion pet.</label>
+            <input type="checkbox" name="has-pet" id="has-pet" value="yes">
+            <fieldset class="conditional">
+                <legend>Companion pet</legend>
+                <label>Species<input type="text" name="pet-species" placeholder="e.g., owl"></label>
+                <label>Name<input type="text" name="pet-name" placeholder="e.g., Hedwig"></label>
+            </fieldset>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" pattern=".+@hogwarts\.ac\.uk"
+                placeholder="e.g., hjp@hogwarts.ac.uk"
+                title="An email address ending with @hogwarts.ac.uk is required.">
+        </div>
+
+        <div>
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments" rows="5" maxlength="200"
+                placeholder="e.g., I would like to be included in the quidditch team."></textarea>
+        </div>
+        <div>
+            <label for="photo">Photo</label>
+            <input type="file" name="photo" id="photo" accept="image/png,image/jpeg">
+        </div>
+        <div>
+            <button type="submit" id="submit-btn">Submit</button>
+        </div>
+    </form>
+    <script src="hogwarts-form-extra_extra_en.js"></script>
+</body>
+</html>

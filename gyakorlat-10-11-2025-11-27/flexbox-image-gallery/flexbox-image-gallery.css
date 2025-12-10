@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+}
+
+div.images {
+    background-color: aliceblue;
+    box-shadow: 0 0 0.5rem darkblue;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+div.images > img {
+    border-radius: 1rem;
+    box-shadow: 0 0 0.25rem darkblue;
+    transition: transform 0.5s ease;
+}
+
+div.images > img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}

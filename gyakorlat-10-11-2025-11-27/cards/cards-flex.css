@@ -1,0 +1,26 @@
+@import "cards.css";
+
+body {
+    margin: 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.card {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topLeft {
+    align-self: flex-start;
+}
+
+.bottomRight {
+    align-self: flex-end;
+}
